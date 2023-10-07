@@ -1,4 +1,4 @@
-﻿namespace MyEcoApp_MauiApp
+﻿namespace MyEcoApp_MauiApp.View.Main
 {
     public partial class MainPage : ContentPage
     {
