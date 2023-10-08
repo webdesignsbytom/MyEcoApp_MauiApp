@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using MyEcoApp_MauiApp.Services.Users;
 using MyEcoApp_MauiApp.View.Register;
 using MyEcoApp_MauiApp.ViewModel.Register;
 
@@ -16,6 +17,7 @@ namespace MyEcoApp_MauiApp
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
                 });
+            builder.Services.AddSingleton<RegisterService>();
             builder.Services.AddSingleton<RegisterPage>();
             builder.Services.AddSingleton<RegisterPageViewModel>();
 

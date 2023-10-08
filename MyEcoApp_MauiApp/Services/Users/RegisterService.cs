@@ -6,12 +6,13 @@ namespace MyEcoApp_MauiApp.Services.Users
 {
     public class RegisterService
     {
-        public async Task RegisterNewMember(string Username, string Email, string FirstName, string LastName)
+        public async Task RegisterNewMember(string Username, string Email, string FirstName, string LastName, string Password)
         {
             var username = Username;
             var email = Email;
             var firstName = FirstName;
             var lastName = LastName;
+            var password = Password;
             var agreedToTerms = true;
             var agreedToNewsletter = true;
 
@@ -26,12 +27,16 @@ namespace MyEcoApp_MauiApp.Services.Users
                 email,
                 firstName,
                 lastName,
+                password,
                 agreedToTerms,
                 agreedToNewsletter,
             };
+            Debug.WriteLine($"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX {requestBody}");
 
             try
             {
+                Debug.WriteLine("AAAAAAAAAAAAAAAAAAAA");
+                Debug.WriteLine("AAAAAAAAAAAAAAAAAAAA");
                 var json = JsonConvert.SerializeObject(requestBody);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
@@ -41,12 +46,12 @@ namespace MyEcoApp_MauiApp.Services.Users
 
                 string responseBody = await response.Content.ReadAsStringAsync();
 
-                Debug.WriteLine(responseBody);
+                Debug.WriteLine($"TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT {responseBody}");
                 Console.WriteLine(responseBody);
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                Console.WriteLine($"Error TOMMMMMMMMM: {ex.Message}");
             }
         }
     }

@@ -20,15 +20,42 @@
             x:Name="EmailEntry"
             ReturnCommand="{Binding CloseKeyboardCommand}"
             MaxLength="34"
+            />        
+        
+        <Entry Placeholder="Enter username..."
+            Text="{Binding Username}"
+            x:Name="UsernameEntry"
+            ReturnCommand="{Binding CloseKeyboardCommand}"
+            MaxLength="34"
             />
 
         <Entry Placeholder="Password" 
                Text="{Binding Password}"
                IsPassword="True" 
                x:Name="passwordEntry" 
+               />        
+        
+        <Entry Placeholder="Confirm Password" 
+               Text="{Binding ConfirmPassword}"
+               IsPassword="True" 
+               x:Name="ConfirmPasswordEntry" 
                />
 
-        <Button x:Name="SubmitScoreBtn" Text="{Binding SubmitBtn}" Margin="0,20,0,0" Command="{Binding PostRegister}" />
+        <Entry Placeholder="Enter first name..."
+            Text="{Binding FirstName}"
+            x:Name="FirstNameEntry"
+            ReturnCommand="{Binding CloseKeyboardCommand}"
+            MaxLength="34"
+            />
+
+        <Entry Placeholder="Enter last name..."
+            Text="{Binding LastName}"
+            x:Name="LastNameEntry"
+            ReturnCommand="{Binding CloseKeyboardCommand}"
+            MaxLength="34"
+            />
+
+        <Button x:Name="SubmitScoreBtn" Text="{Binding SubmitBtn}" Margin="0,20,0,0" Command="{Binding PostRegisterCommand}" />
 
     </VerticalStackLayout>
 </ContentPage>
