@@ -55,7 +55,7 @@
             MaxLength="34"
             />
 
-        <Button x:Name="SubmitScoreBtn" Text="{Binding SubmitBtn}" Margin="0,20,0,0" Command="{Binding PostRegisterCommand}" />
+        <Button x:Name="SubmitRegisterBtn" Text="{Binding SubmitBtn}" Margin="0,20,0,0" Command="{Binding PostRegisterCommand}" />
 
     </VerticalStackLayout>
 </ContentPage>

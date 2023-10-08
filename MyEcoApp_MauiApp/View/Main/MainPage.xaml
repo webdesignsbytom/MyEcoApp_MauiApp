@@ -35,6 +35,14 @@
                 SemanticProperties.Hint="Back to welcome screen"
                 Clicked="RegisterButton_Clicked"
                 HorizontalOptions="Center" />
+            
+            <Button
+                x:Name="LoginButton"
+                Text="Login"
+                WidthRequest="140"
+                SemanticProperties.Hint="Back to welcome screen"
+                Clicked="LoginButton_Clicked"
+                HorizontalOptions="Center" />
 
         </VerticalStackLayout>
     </ScrollView>

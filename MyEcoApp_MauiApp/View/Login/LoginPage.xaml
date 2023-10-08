@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyEcoApp_MauiApp.View.Login.LoginPage"
+             xmlns:viewModels="clr-namespace:MyEcoApp_MauiApp.ViewModel.Login"
+             Title="LoginPage">
+
+    <ContentPage.BindingContext>
+        <viewModels:LoginPageViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout>
+        
+        <Label 
+            Text="Login"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Entry Placeholder="Enter username..."
+             Text="{Binding Username}"
+             x:Name="UsernameEntry"
+             ReturnCommand="{Binding CloseKeyboardCommand}"
+             MaxLength="34"
+             />
+
+        <Entry Placeholder="Password" 
+            Text="{Binding Password}"
+            IsPassword="True" 
+            x:Name="passwordEntry" 
+            />
+        
+        <Button x:Name="LoginRequestBtn" Text="{Binding SubmitBtn}" Margin="0,20,0,0" Command="{Binding PostLoginCommand}" />
+
+    </VerticalStackLayout>
+</ContentPage>

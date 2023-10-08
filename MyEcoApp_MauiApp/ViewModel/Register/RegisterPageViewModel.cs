@@ -61,7 +61,7 @@ namespace MyEcoApp_MauiApp.ViewModel.Register
         }
 
         [RelayCommand]
-        public void CloseKeyboard()
+        public static void CloseKeyboard()
         {
             App.Current.MainPage.Focus();
         }

@@ -61,12 +61,14 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="View\Login\" />
 	  <Folder Include="View\Media\" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiXaml Update="View\About\AboutPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Login\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Register\RegisterPage.xaml">

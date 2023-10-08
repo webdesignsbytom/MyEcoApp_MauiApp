@@ -7,6 +7,7 @@
     xmlns:main="clr-namespace:MyEcoApp_MauiApp.View.Main"
     xmlns:about="clr-namespace:MyEcoApp_MauiApp.View.About"
     xmlns:register="clr-namespace:MyEcoApp_MauiApp.View.Register"
+    xmlns:login="clr-namespace:MyEcoApp_MauiApp.View.Login"
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
@@ -22,6 +23,11 @@
     <ShellContent
         Title="Register"
         ContentTemplate="{DataTemplate register:RegisterPage}"
-        Route="RegisterPage" />
+        Route="RegisterPage" />    
+    
+    <ShellContent
+        Title="Login"
+        ContentTemplate="{DataTemplate login:LoginPage}"
+        Route="LoginPage" />
 
 </Shell>

@@ -11,5 +11,10 @@
         {
             await AppShell.Current.GoToAsync("///RegisterPage");
         }
+
+        private async void LoginButton_Clicked(object sender, EventArgs e)
+        {
+            await AppShell.Current.GoToAsync("///LoginPage");
+        }
     }
 }
