@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyEcoApp_MauiApp.View.User.UserLogRegPage"
+             Title="UserLogRegPage">
+    <VerticalStackLayout>
+        
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Button
+            x:Name="RegisterButton"
+            Text="Register"
+            WidthRequest="140"
+            SemanticProperties.Hint="Back to welcome screen"
+            Clicked="RegisterButton_Clicked"
+            HorizontalOptions="Center" />
+
+        <Button
+            x:Name="LoginButton"
+            Text="Login"
+            WidthRequest="140"
+            SemanticProperties.Hint="Back to welcome screen"
+            Clicked="LoginButton_Clicked"
+            HorizontalOptions="Center" />
+        
+    </VerticalStackLayout>
+</ContentPage>

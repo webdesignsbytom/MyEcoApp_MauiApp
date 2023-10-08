@@ -3,14 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyEcoApp_MauiApp.View.Main.MainPage">
 
-    <ScrollView>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        
+        <HorizontalStackLayout HeightRequest="30" BackgroundColor="DarkSeaGreen" Grid.Row="0">
+            <StackLayout HorizontalOptions="End">
+                
+            <ImageButton
+                Source="settings_icon.png"
+                x:Name="UserSettingsBtn"
+                HeightRequest="15"
+                WidthRequest="15"
+                HorizontalOptions="End"      
+                VerticalOptions="Center"
+                Clicked="UserSettingsBtn_Clicked"
+                />
+            </StackLayout>
+            
+        </HorizontalStackLayout>
+            
         <VerticalStackLayout
+            Grid.Row="1"
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
 
             <Image
-                Source="dotnet_bot.png"
+                Source="myea_logo.jpg"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
                 HeightRequest="200"
                 HorizontalOptions="Center" />
@@ -29,22 +51,15 @@
                 HorizontalOptions="Center" />
 
             <Button
-                x:Name="RegisterButton"
-                Text="Register"
+                x:Name="UserLogRegBtn"
+                Text="User settings"
                 WidthRequest="140"
                 SemanticProperties.Hint="Back to welcome screen"
-                Clicked="RegisterButton_Clicked"
-                HorizontalOptions="Center" />
-            
-            <Button
-                x:Name="LoginButton"
-                Text="Login"
-                WidthRequest="140"
-                SemanticProperties.Hint="Back to welcome screen"
-                Clicked="LoginButton_Clicked"
+                Clicked="UserLogRegBtn_Clicked"
                 HorizontalOptions="Center" />
 
+
         </VerticalStackLayout>
-    </ScrollView>
+    </Grid>
 
 </ContentPage>

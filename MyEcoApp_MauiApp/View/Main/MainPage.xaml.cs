@@ -7,14 +7,16 @@
             InitializeComponent();
         }
 
-        private async void RegisterButton_Clicked(object sender, EventArgs e)
+        private async void UserLogRegBtn_Clicked(object sender, EventArgs e)
         {
-            await AppShell.Current.GoToAsync("///RegisterPage");
+            await AppShell.Current.GoToAsync("///NewUserPage");
+
         }
 
-        private async void LoginButton_Clicked(object sender, EventArgs e)
+        private async void UserSettingsBtn_Clicked(object sender, EventArgs e)
         {
-            await AppShell.Current.GoToAsync("///LoginPage");
+            await AppShell.Current.GoToAsync("///NewUserPage");
+
         }
     }
 }

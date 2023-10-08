@@ -51,6 +51,7 @@
 	<ItemGroup>
 	  <None Remove="Resources\Images\myea_banner.png" />
 	  <None Remove="Resources\Images\myea_logo.jpg" />
+	  <None Remove="Resources\Images\settings_icon.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -72,6 +73,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Register\RegisterPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\User\UserLogRegPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
