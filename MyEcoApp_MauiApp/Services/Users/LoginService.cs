@@ -27,12 +27,8 @@ namespace MyEcoApp_MauiApp.Services.Users
                 password,
             };
 
-            Debug.WriteLine($"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX {requestBody}");
-
             try
             {
-                Debug.WriteLine("AAAAAAAAAAAAAAAAAAAA");
-                Debug.WriteLine("AAAAAAAAAAAAAAAAAAAA");
                 var json = JsonConvert.SerializeObject(requestBody);
                 var content = new StringContent(json, Encoding.UTF8, "application/json");
 
@@ -42,34 +38,21 @@ namespace MyEcoApp_MauiApp.Services.Users
 
                 string responseBody = await response.Content.ReadAsStringAsync();
 
-                Debug.WriteLine($"TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT {responseBody}");
                 Console.WriteLine(responseBody);
 
                 // Parse the JSON response and extract the user data
                 var jsonResponse = JsonConvert.DeserializeObject<dynamic>(responseBody);
 
                 var userData = jsonResponse.data.existingUser;
+                var tokenData = jsonResponse.data.token;
+
                 Debug.WriteLine($"UUUUUUUUUUUUUUUUUUUU {userData}");
 
-                // Deserialize JSON data into User object
-                User user = JsonConvert.DeserializeObject<User>(userData);
-                Console.WriteLine($"User ID: {user}");
-                Debug.WriteLine($"User ID: {user}");
-
-                // Access user properties
-                Console.WriteLine($"User ID: {user.Id}");
-                Console.WriteLine($"User Email: {user.Email}");
-                Debug.WriteLine($"User Role: {user.Role}");
-
-                // Access profile properties
-                Console.WriteLine($"Profile ID: {user.Profile.Id}");
-                Debug.WriteLine($"Profile Username: {user.Profile.Username}");
-                Console.WriteLine($"Profile Country: {user.Profile.Country}");
-
+                User loggedInUser = new((string) userData.id, (string) userData.email, (string) userData.role,(string) userData.profile.username);
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error TOMMMMMMMMM: {ex.Message}");
+                Console.WriteLine($"Error logging in: {ex.Message}");
             }
         }
     }

@@ -27,6 +27,7 @@ namespace MyEcoApp_MauiApp
             builder.Services.AddSingleton<LoginPage>();
             builder.Services.AddSingleton<LoginPageViewModel>();
             builder.Services.AddSingleton<User>();
+            builder.Services.AddSingleton<UserState>();
 
 #if DEBUG
             builder.Logging.AddDebug();

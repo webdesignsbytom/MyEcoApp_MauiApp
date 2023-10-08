@@ -8,26 +8,24 @@ namespace MyEcoApp_MauiApp.Model.User
 {
     public class User
     {
-        public string Id { get; set; }
-        public string Email { get; set; }
-        public string Role { get; set; }
-        public DateTime LastLoggedIn { get; set; }
-        public bool IsVerified { get; set; }
-        public bool AgreedToTerms { get; set; }
-        public bool AgreedToNewsletter { get; set; }
-        public bool IsActive { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
-        public List<object> Messages { get; set; }
-        public List<object> Notifications { get; set; }
-        public Profile Profile { get; set; }
-        public object NewsletterMember { get; set; }
+        public string ID { get; set; }  
+        public string Email { get; set; }  
+        public string Role { get; set; } 
+        
+        public Profile Profile = new Profile();
+
+        public User(string id, string email, string role, string username)
+        {
+            ID = id;
+            Email = email;
+            Role = role;
+            Profile.Username = username;
+        }
     }
 
     public class Profile
     {
         public string Id { get; set; }
-        public string UserId { get; set; }
         public string Username { get; set; }
         public string City { get; set; }
         public string Country { get; set; }
