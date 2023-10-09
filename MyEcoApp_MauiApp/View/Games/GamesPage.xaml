@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyEcoApp_MauiApp.View.Games.GamesPage"
+             Title="GamesPage">
+    <VerticalStackLayout BackgroundColor="#4AAD37">
+        <Label 
+            Text="GAMES"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <VerticalStackLayout HorizontalOptions="Center">
+            <Label Text="Many fun games are available IN app" />
+            <Label Text="and as seperate downloads." />
+            <Label Text="We created many fun games for you to play" />
+            <Label Text="and help earn money for eco projects!" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Label 
+                Text="Featured Game"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+            <Image Source="test_image.jpg" WidthRequest="200" HeightRequest="100" />
+        </VerticalStackLayout>
+
+        <VerticalStackLayout>
+            <Button
+                x:Name="GamesListBtn"
+                Grid.Column="0" Grid.Row="0"
+                Text="Games list!"
+                WidthRequest="140"
+                HeightRequest="40"
+                SemanticProperties.Hint="See list of games"
+                Clicked="GamesListBtn_Clicked"
+                HorizontalOptions="Center" />
+        </VerticalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

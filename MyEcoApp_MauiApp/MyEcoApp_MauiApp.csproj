@@ -52,6 +52,7 @@
 	  <None Remove="Resources\Images\myea_banner.png" />
 	  <None Remove="Resources\Images\myea_logo.jpg" />
 	  <None Remove="Resources\Images\settings_icon.png" />
+	  <None Remove="Resources\Images\test_image.jpg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -64,7 +65,6 @@
 	<ItemGroup>
 	  <Folder Include="View\Media\" />
 	  <Folder Include="View\Funding\" />
-	  <Folder Include="View\Games\" />
 	  <Folder Include="View\Newsletter\" />
 	  <Folder Include="View\Newsfeed\" />
 	  <Folder Include="View\Projects\" />
@@ -72,6 +72,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="View\About\AboutPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Games\GamesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Login\LoginPage.xaml">

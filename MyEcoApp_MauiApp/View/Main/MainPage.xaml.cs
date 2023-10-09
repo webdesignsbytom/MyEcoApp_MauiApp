@@ -14,7 +14,7 @@
 
         private async void GamesPageBtn_Clicked(object sender, EventArgs e)
         {
-            await AppShell.Current.GoToAsync("///NewUserPage");
+            await AppShell.Current.GoToAsync("///GamesPage");
 
         }
         private async void AboutPageBtn_Clicked(object sender, EventArgs e)
