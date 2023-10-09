@@ -3,34 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyEcoApp_MauiApp.View.Main.MainPage">
 
-    <Grid>
+    <Grid BackgroundColor="#4AAD37">
         <Grid.RowDefinitions>
-            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        
-        <HorizontalStackLayout HeightRequest="30" BackgroundColor="DarkSeaGreen" Grid.Row="0">
-            <StackLayout HorizontalOptions="End">
-                
-            <ImageButton
-                Source="settings_icon.png"
-                x:Name="UserSettingsBtn"
-                HeightRequest="15"
-                WidthRequest="15"
-                HorizontalOptions="End"      
-                VerticalOptions="Center"
-                Clicked="UserSettingsBtn_Clicked"
-                />
-            </StackLayout>
-            
-        </HorizontalStackLayout>
-            
+
         <VerticalStackLayout
-            Grid.Row="1"
+            Grid.Row="0"
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
-
+            
             <Image
                 Source="myea_logo.jpg"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
@@ -49,17 +33,59 @@
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
                 FontSize="18"
                 HorizontalOptions="Center" />
+        </VerticalStackLayout>
 
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition  />
+                <RowDefinition  />
+            </Grid.RowDefinitions>
+            
             <Button
                 x:Name="UserLogRegBtn"
-                Text="User settings"
+                Grid.Column="0" Grid.Row="0"
+                Text="Users"
                 WidthRequest="140"
-                SemanticProperties.Hint="Back to welcome screen"
+                HeightRequest="40"
+                SemanticProperties.Hint="Login/Register"
                 Clicked="UserLogRegBtn_Clicked"
                 HorizontalOptions="Center" />
 
+            <Button
+                x:Name="GamesPageBtn"
+                Grid.Column="1" Grid.Row="0"
+                Text="Games"
+                WidthRequest="140"
+                HeightRequest="40"
+                SemanticProperties.Hint="Go to Games page"
+                Clicked="GamesPageBtn_Clicked"
+                HorizontalOptions="Center" />
+            
+            <Button
+                x:Name="AboutPageBtn"
+                Grid.Column="0" Grid.Row="1"
+                Text="About"
+                WidthRequest="140"
+                HeightRequest="40"
+                SemanticProperties.Hint="Go to About page"
+                Clicked="AboutPageBtn_Clicked"
+                HorizontalOptions="Center" />
 
-        </VerticalStackLayout>
+            <Button
+                x:Name="ProjectsPageBtn"
+                Grid.Column="1" Grid.Row="1"
+                Text="Projects"
+                WidthRequest="140"
+                HeightRequest="40"
+                SemanticProperties.Hint="Go to Projects page"
+                Clicked="ProjectsPageBtn_Clicked"
+                HorizontalOptions="Center" />
+        </Grid>
+        
     </Grid>
 
 </ContentPage>

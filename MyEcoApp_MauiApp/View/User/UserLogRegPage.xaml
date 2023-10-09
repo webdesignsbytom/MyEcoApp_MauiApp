@@ -3,10 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyEcoApp_MauiApp.View.User.UserLogRegPage"
              Title="UserLogRegPage">
-    <VerticalStackLayout>
+    
+    <VerticalStackLayout BackgroundColor="#4AAD37">
         
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="MYECOAPP"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        
+        <Label 
+            Text="Your free membership will fund our eco projects!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        
+        <Label 
+            Text="Sign in below or register a new account"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 

@@ -9,8 +9,14 @@
     xmlns:register="clr-namespace:MyEcoApp_MauiApp.View.Register"
     xmlns:login="clr-namespace:MyEcoApp_MauiApp.View.Login"
     xmlns:newUser="clr-namespace:MyEcoApp_MauiApp.View.User"
+    xmlns:welcome="clr-namespace:MyEcoApp_MauiApp.View.Welcome"
     Shell.FlyoutBehavior="Disabled">
 
+    <ShellContent
+        Title="Welcome Screen"
+        ContentTemplate="{DataTemplate welcome:WelcomeScreen}"
+        Route="WelcomeScreen" />
+    
     <ShellContent
         Title="Home"
         ContentTemplate="{DataTemplate main:MainPage}"
@@ -34,6 +40,8 @@
     <ShellContent
         Title="New User"
         ContentTemplate="{DataTemplate newUser:UserLogRegPage}"
-        Route="NewUserPage" />
+        Route="NewUserPage" />    
+    
+
 
 </Shell>

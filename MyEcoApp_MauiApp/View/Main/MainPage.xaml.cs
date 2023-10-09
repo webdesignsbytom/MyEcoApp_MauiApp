@@ -10,13 +10,24 @@
         private async void UserLogRegBtn_Clicked(object sender, EventArgs e)
         {
             await AppShell.Current.GoToAsync("///NewUserPage");
-
         }
 
-        private async void UserSettingsBtn_Clicked(object sender, EventArgs e)
+        private async void GamesPageBtn_Clicked(object sender, EventArgs e)
         {
             await AppShell.Current.GoToAsync("///NewUserPage");
 
         }
+        private async void AboutPageBtn_Clicked(object sender, EventArgs e)
+        {
+            await AppShell.Current.GoToAsync("///NewUserPage");
+
+        }
+        private async void ProjectsPageBtn_Clicked(object sender, EventArgs e)
+        {
+            await AppShell.Current.GoToAsync("///NewUserPage");
+
+        }
+
+
     }
 }

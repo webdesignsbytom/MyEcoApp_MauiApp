@@ -63,6 +63,11 @@
 
 	<ItemGroup>
 	  <Folder Include="View\Media\" />
+	  <Folder Include="View\Funding\" />
+	  <Folder Include="View\Games\" />
+	  <Folder Include="View\Newsletter\" />
+	  <Folder Include="View\Newsfeed\" />
+	  <Folder Include="View\Projects\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -76,6 +81,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\User\UserLogRegPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Welcome\WelcomeScreen.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
