@@ -65,13 +65,15 @@
 	<ItemGroup>
 	  <Folder Include="View\Media\" />
 	  <Folder Include="View\Funding\" />
-	  <Folder Include="View\Newsletter\" />
 	  <Folder Include="View\Newsfeed\" />
-	  <Folder Include="View\Projects\" />
+	  <Folder Include="View\User\LogReg\" />
 	</ItemGroup>
 
 	<ItemGroup>
 	  <MauiXaml Update="View\About\AboutPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\EmailCampaign\EmailCampaignMainPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Games\GamesPage.xaml">
@@ -80,10 +82,16 @@
 	  <MauiXaml Update="View\Login\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\Register\RegisterPage.xaml">
+	  <MauiXaml Update="View\Newsletter\Main\NewsletterMainPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="View\User\UserLogRegPage.xaml">
+	  <MauiXaml Update="View\Newsletter\SignUp\NewsletterSignUpPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Projects\ProjectsMainPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Register\RegisterPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="View\Welcome\WelcomeScreen.xaml">

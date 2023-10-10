@@ -8,9 +8,14 @@
     xmlns:about="clr-namespace:MyEcoApp_MauiApp.View.About"
     xmlns:register="clr-namespace:MyEcoApp_MauiApp.View.Register"
     xmlns:login="clr-namespace:MyEcoApp_MauiApp.View.Login"
-    xmlns:newUser="clr-namespace:MyEcoApp_MauiApp.View.User"
+    xmlns:newUser="clr-namespace:MyEcoApp_MauiApp.View.User.LogReg"
     xmlns:welcome="clr-namespace:MyEcoApp_MauiApp.View.Welcome"
     xmlns:games="clr-namespace:MyEcoApp_MauiApp.View.Games"
+    xmlns:emailCampaign="clr-namespace:MyEcoApp_MauiApp.View.EmailCampaign"
+    xmlns:projects="clr-namespace:MyEcoApp_MauiApp.View.Projects"
+    xmlns:newsletterMain="clr-namespace:MyEcoApp_MauiApp.View.Newsletter.Main"
+    xmlns:newsletterSignUp="clr-namespace:MyEcoApp_MauiApp.View.Newsletter.SignUp"
+   
     Shell.FlyoutBehavior="Disabled">
 
     <ShellContent
@@ -37,17 +42,31 @@
         Title="Login"
         ContentTemplate="{DataTemplate login:LoginPage}"
         Route="LoginPage" />    
-    
-    <ShellContent
-        Title="New User"
-        ContentTemplate="{DataTemplate newUser:UserLogRegPage}"
-        Route="NewUserPage" />     
+     
     
     <ShellContent
         Title="Games"
         ContentTemplate="{DataTemplate games:GamesPage}"
-        Route="GamesPage" />    
+        Route="GamesPage" />      
     
-
-
+    <ShellContent
+        Title="Projects"
+        ContentTemplate="{DataTemplate emailCampaign:EmailCampaignMainPage}"
+        Route="EmailCampaignMainPage" />       
+    
+    <ShellContent
+        Title="Email Campaign"
+        ContentTemplate="{DataTemplate projects:ProjectsMainPage}"
+        Route="ProjectsMainPage" />      
+    
+    <ShellContent
+        Title="Newsletter"
+        ContentTemplate="{DataTemplate newsletterMain:NewsletterMainPage}"
+        Route="NewsletterMainPage" />        
+    
+    <ShellContent
+        Title="Newsletter Sign Up"
+        ContentTemplate="{DataTemplate newsletterSignUp:NewsletterSignUpPage}"
+        Route="NewsletterSignUpPage" />    
+   
 </Shell>

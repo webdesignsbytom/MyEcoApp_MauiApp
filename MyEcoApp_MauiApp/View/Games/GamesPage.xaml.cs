@@ -9,7 +9,6 @@ public partial class GamesPage : ContentPage
 
     private async void GamesListBtn_Clicked(object sender, EventArgs e)
     {
-        await AppShell.Current.GoToAsync("///NewUserPage");
-
+        await AppShell.Current.GoToAsync("///ProjectsMainPage   ");
     }
 }

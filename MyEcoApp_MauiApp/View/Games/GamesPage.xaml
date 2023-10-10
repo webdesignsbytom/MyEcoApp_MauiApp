@@ -33,7 +33,7 @@
                 WidthRequest="140"
                 HeightRequest="40"
                 SemanticProperties.Hint="See list of games"
-                Clicked="GamesListBtn_Clicked"
+                Clicked="GamesListBtn_Clicked" 
                 HorizontalOptions="Center" />
         </VerticalStackLayout>
     </VerticalStackLayout>
